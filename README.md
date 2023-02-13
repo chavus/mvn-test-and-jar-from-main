@@ -4,28 +4,30 @@ This project is a template for "stand alone" tests that need to be packed into a
 1. Test is developed under main module
 2. `maven-assembly-plugin` is added to pom to specify main class and to include dependencies in jar:
 ```xml
-<plugin>
-    <artifactId>maven-assembly-plugin</artifactId>
-    <executions>
-        <execution>
-            <phase>package</phase>
-            <goals>
-                <goal>single</goal>
-            </goals>
-        </execution>
-    </executions>
-    <configuration>
-        <archive>
-            <manifest>
-                <addClasspath>true</addClasspath>
-                <mainClass>run.TestMainRunner</mainClass>
-            </manifest>
-        </archive>
-        <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-        </descriptorRefs>
-    </configuration>
-</plugin> 
+<plugins>
+    <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+            <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>single</goal>
+                </goals>
+            </execution>
+        </executions>
+        <configuration>
+            <archive>
+                <manifest>
+                    <addClasspath>true</addClasspath>
+                    <mainClass>run.TestMainRunner</mainClass>
+                </manifest>
+            </archive>
+            <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+        </configuration>
+    </plugin> 
+</plugins>
 ```
 3. `src/main/java` and `src/main/resources` are defined as test sources and resource in the pom file:
 ```xml
