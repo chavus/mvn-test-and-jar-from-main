@@ -29,15 +29,17 @@ This project is a template for "stand alone" tests that need to be packed into a
 ```
 3. `src/main/java` and `src/main/resources` are defined as test sources and resource in the pom file:
 ```xml
-<testSourceDirectory>
-    src/main/java
-</testSourceDirectory>
-
-<testResources>
-    <testResource>
-        <directory>src/main/resources</directory>
-    </testResource>
-</testResources> 
+<build>
+        <testSourceDirectory>
+            src/main/java
+        </testSourceDirectory>
+        
+        <testResources>
+            <testResource>
+                <directory>src/main/resources</directory>
+            </testResource>
+        </testResources> 
+</build>
 ```
 
 4. To generate jar, run from terminal:
