@@ -1,6 +1,6 @@
 This project is a template for "stand alone" tests that need to be packed into an executable `jar` and also need to be run using `mvn test`
 
-### Main characteristics:
+### Characteristics:
 1. Test is developed under main module
 2. `maven-assembly-plugin` is added to pom to specify main class and to include dependencies in jar:
 ```xml
